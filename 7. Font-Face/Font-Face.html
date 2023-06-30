@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Font-Face</title>
+    <style>
+        @font-face {
+            font-family: 'alex_brushregular';
+            src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+                url('alexbrush-regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+}
+
+        @font-face {
+            font-family: 'open_sansregular';
+            src: url('OpenSans-Regular-webfont.eot');
+            src: url('OpenSans-Regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+}
+
+
+        h1{
+            font-size: 100px;
+            text-align: center;
+            font-family: alex_brushregular ;
+        }
+
+        h2{
+            font-size: 100px;
+            text-align: center;
+            font-family: open_sansregular ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h2>Hello World</h2>
+</body>
+</html>

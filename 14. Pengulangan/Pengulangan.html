@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pengulangan</title>
+    <style>
+        body{
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        div{
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 50px 10px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 12px;
+        }
+
+        .br1{
+            background-color: aqua;
+            border-radius: 40px;
+        }
+
+        .br2{
+            background-color: aqua;
+            border-top-left-radius: 20%;
+        }
+        
+        .br3{
+            background-color: aqua;
+            border-top-right-radius: 20%;
+        }
+        
+        .br4{
+            background-color: aqua;
+            border-bottom-right-radius: 20%;
+        }
+
+        .br5{
+            background-color: aqua;
+            border-bottom-left-radius: 20%;
+        }
+
+        .OP{
+            background-color: orange;
+            opacity: .5;
+        }
+
+        .rh1{
+            background-color: rgba(0, 255, 13, .5);
+        }
+        
+        .rh2{
+            background-color: hsla(0, 255%, 13%, .5);
+        }
+
+        .bs1{
+            background-color: red;
+            box-shadow: 5px 5px 2px orange;
+        }
+
+        .bs2{
+            background-color: red;
+            box-shadow: 0px 30px 5px -20px rgba(255, 166, 0, 1);
+            position: relative;
+        }
+
+        .bs2:hover{
+            background-color: red;
+            box-shadow: 0px 50px 10px -30px rgba(255, 166, 0, 0.712);
+            bottom: 20px;
+        }
+
+        .bs3{
+            background-color: red;
+            box-shadow: inset 0 0 5px 10px orange;
+        }
+
+        .bs4{
+            background-color: red;
+            box-shadow: 10px 10px 5px  yellow,
+            -10px -10px 5px  green;
+        }
+
+        .ts{
+            background-color: blue;
+            text-align: center;
+            line-height: 200px;
+            text-shadow: 2px 2px white;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .lg1{
+            background-image: linear-gradient(45deg, red , blue 150px);
+        }
+
+        .lg2{
+            background-image: linear-gradient(to right, red , blue 150px);
+        }
+
+        .rg1{
+            background-image: radial-gradient(circle, yellow, green);
+            width: 300px;
+        }
+
+        .rg2{
+            background-image: radial-gradient(ellipse, yellow, green);
+            width: 300px;
+        }
+
+        .rg3{
+            background-image: radial-gradient(circle closest-side, yellow, green);
+            width: 300px;
+        }
+
+        .rg4{
+            background-image: radial-gradient(ellipse farthest-side, yellow, green);
+            width: 300px;
+        }
+
+        .rg5{
+            background-image: radial-gradient(circle closest-corner at bottom center, yellow, green);
+            width: 300px;
+        }
+
+        .rg6{
+            background-image: radial-gradient(ellipse farthest-corner at top left , yellow, green);
+            width: 300px;
+        }
+
+        @font-face {
+            font-family: sofiyan;
+            src: url(AlexBrush-Regular.ttf) format('truetype');
+        }
+        
+        .ff{
+            font-family: sofiyan;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .vp{
+            background-image: url(3998.jpg);
+            -webkit-filter: grayscale(.5);
+            filter: grayscale(.5);
+            color: white;
+            margin-top: -10px;
+            background-position-x: center;
+            background-position-y: -50px;
+            background-size: cover;
+        }
+        
+        .ft1{
+            background-image: url(colls.png);
+            filter: blur(3px);
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px black,
+            -1px -1px black;
+        }
+
+        .ft2{
+            background-image: url(colls.png);
+            filter: brightness(2);
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px black,
+            -1px -1px black;
+        }
+
+        .ft3{
+            background-image: url(colls.png);
+            filter: contrast(6);
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px black,
+            -1px -1px black;
+        }
+
+        .ft4{
+            background-image: url(colls.png);
+            filter: drop-shadow(10px 10px 5px );
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px black,
+            -1px -1px black;
+        }
+
+        .ft5{
+            background-image: url(colls.png);
+            filter: grayscale(1);
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px black,
+            -1px -1px black;
+        }
+
+        .ft6{
+            background-image: url(colls.png);
+            filter: hue-rotate(290deg);
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px black,
+            -1px -1px black;
+        }
+
+        .ft7{
+            background-image: url(colls.png);
+            filter: invert(1);
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px black,
+            -1px -1px black;
+        }
+
+        .ft8{
+            background-image: url(colls.png);
+            filter: opacity(.6);
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px black,
+            -1px -1px black;
+        }
+
+        .ft9{
+            background-image: url(colls.png);
+            filter: sepia(1);
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px black,
+            -1px -1px black;
+        }
+
+        .tf1{
+            background-color: blue;
+            transform: scale(2);
+            margin: 100px;
+            margin-right: 135px;
+        }
+
+        .tf2{
+            background-color: blue;
+            transform: rotate(45deg);
+            margin-right: 40px;
+        }
+
+        .tf3{
+            background-color: blue;
+            transform: skew(45deg);
+            margin-right: 55px;
+        }
+
+        .tf4{
+            background-color: blue;
+            transform: translate(40px);
+        }
+        
+        .tr1{
+            background-color: red;
+            transition: 1s;
+            position: relative;
+        }
+
+        .tr1:hover{
+            background-color: blue;
+        }
+
+        .tr2{
+            width: 600px;
+            height: 640px;
+            margin: 10px auto;
+            border: 5px solid black;
+        }
+        .trn{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: all 1s;
+            text-align: center;
+            line-height: 100px;
+            margin: 5px 5px;
+            display: block;
+            font-size: 13px;
+        }
+
+        .trn1{
+            transition: all 2s ease;
+        }
+
+        .trn2{
+            transition: all 2s ease-in;
+        }
+
+        .trn3{
+            transition: all 2s ease-out;
+        }
+
+        .trn4{
+            transition: all 2s ease-in-out;
+        }
+
+        .trn5{
+            transition: all 2s linear;
+        }
+
+        .trn6{
+            transition: all 2s cubic-bezier(0.79, -0.65, 0.15, 1.65);
+        }
+
+        .tr2:hover .trn{
+            margin-left: 495px;
+            background-color: red;
+            transform: rotate(720deg);
+        }
+        .tr3{
+            background-color: red;
+            transition: 2s 1s;
+            position: relative;
+        }
+
+        .tr3:hover{
+            background-color: blue;
+        }
+
+        .an{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(251, 255, 0);
+            text-align: center;
+            line-height: 140px;
+            animation: animasikotak 2s 2s alternate-reverse infinite ;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        @keyframes animasikotak{
+            0%{
+                width: 200px;
+                line-height: 140px;
+            }
+            50%{
+                width: 400px;
+                height: 200px;
+                line-height: 140px;
+            }
+            100%{
+                height: 400px;
+                width: 400px;
+                line-height: 400px;
+            }
+        }
+
+        h5{
+            opacity: 0;
+        }
+
+        h3{
+            text-align: center;
+            line-height: 90px;
+            font-size: 90px;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>BORDER RADIUS</h1>
+    <div class="br1">border-radius</div>
+    <div class="br2">border-top-left-radius</div>
+    <div class="br3">border-top-right-radius</div>
+    <div class="br4">border-bottom-right-radius</div>
+    <div class="br5">border-bottom-left-radius</div>
+
+    <h1>OPACITY</h1>
+    <div class="OP">opacity</div>
+
+    <h1>RGBA & HSLA</h1>
+    <div class="rh1">rgba</div>
+    <div class="rh2">hsla</div>
+    
+    <h1>Box-Shadow</h1>
+    <div class="bs1">kanan bawah</div>
+    <div class="bs2">spread</div>
+    <div class="bs3">inset</div>
+    <div class="bs4">multiple shadow</div>
+    
+    <h1>text_shadow</h1>
+    <div class="ts">text-shadow</div>
+    
+    <h1>linear-gradient</h1>
+    <div class="lg1">derajat</div>
+    <div class="lg2">arah</div>
+
+    <h1>radial-gradient</h1>
+    <div class="rg1">circle</div>
+    <div class="rg2">ellipse</div>
+    <div class="rg3">circle closest-side</div>
+    <div class="rg4">ellipse farthest-side</div>
+    <div class="rg5">circle closest-corner at bottom center </div>
+    <div class="rg6">ellipse farthest-corner at top left</div>
+
+    <h1>font-face</h1>
+    <div class="ff"><h3>font-face</h3></div>
+
+    <h1>vendor-prefix</h1>
+    <div class="vp">vendor-prefix</div>
+
+    <h1>filter</h1>
+    <div class="ft1">blur</div>
+    <div class="ft2">brightness</div>
+    <div class="ft3">contrast</div>
+    <div class="ft4">drop-shadow</div>
+    <div class="ft5">grayscale</div>
+    <div class="ft6">hue-rotate</div>
+    <div class="ft7">invert</div>
+    <div class="ft8">opacity</div>
+    <div class="ft9">sepia</div>
+    
+    <h1>transform</h1>
+    <div class="tf1">scale</div>
+    <h5>.</h5>
+    <div class="tf2">rotate</div>
+    <h5>.</h5>
+    <div class="tf3">skew</div>
+    <h5>.</h5>
+    <div class="tf4">translate</div>
+
+    <h1>transition</h1>
+    <div class="tr1">durasi</div>
+    <h4>fungsi</h4>
+    <div class="tr2">
+        <div class="trn trn1">ease</div>
+        <div class="trn trn2">ease-in</div>
+        <div class="trn trn3">ease-out</div>
+        <div class="trn trn4">ease-in-out</div>
+        <div class="trn trn5">linear</div>
+        <div class="trn trn6">cubic-bezier</div>
+    </div>
+    <h5>.</h5>
+    <div class="tr3">delay</div>
+    
+    <h1>animasi</h1>
+    <div class="an"><h6>animasi</h6></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

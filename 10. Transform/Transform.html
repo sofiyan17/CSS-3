@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transform</title>
+    <style>
+        p{
+            font-size: 90px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .kotak{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 50px auto;
+            transition: 1s;
+        }
+
+        .kotak:hover{
+            transform: scale(3);
+        }
+
+        .satu{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin: 50px auto;
+            transition: 1s;
+        }
+        
+        .satu:hover{
+            transform: rotate(360deg);
+        }
+
+        .dua{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(0, 255, 0);
+            margin: 50px auto;
+            transition: 1s;
+        }
+        
+        .dua:hover{
+            transform: skew(30deg);
+        }
+
+        .tiga{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 50px auto;
+            transition: 1s;
+        }
+        
+        .tiga:hover{
+            transform: translate(50px, 100px);
+        }
+
+        .gabungan{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 50px auto;
+            transition: 1s;
+        }
+
+        .gabungan:hover{
+            transform: scale(3) rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <p>SCALE</p>
+    <div class="kotak"></div>
+    <p>ROTATE</p>
+    <div class="satu"></div>
+    <p>SKEW</p>
+    <div class="dua"></div>
+    <p>TRANSLATE.</p>
+    <div class="tiga"></div>
+    <p>GABUNGAN</p>
+    <div class="gabungan"></div>
+</body>
+</html>
